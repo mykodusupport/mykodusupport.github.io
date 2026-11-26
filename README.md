@@ -11,6 +11,12 @@ https://mykodusupport.github.io/
 │   └─ mykodu-icon.png … まいこづのアプリアイコン
 ├─ mykodu/
 │   └─ index.html      … ぼくのお小遣い帳のLP      → /mykodu/
+├─ timebrave/
+│   ├─ index.html            … タイムブレイブのサポートページ（開発中） → /timebrave/
+│   ├─ terms-of-service.html … 利用規約
+│   ├─ privacy-policy.html   … プライバシーポリシー
+│   ├─ tokushoho.html        … 特定商取引法に基づく表記
+│   └─ payment-services.html … 資金決済法に基づく表示
 └─ .nojekyll
 ```
 

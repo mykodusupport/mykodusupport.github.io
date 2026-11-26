@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="タイムブレイブの特定商取引法に基づく表記です。">
+<link rel="icon" href="data:,">
+<title>特定商取引法に基づく表記｜タイムブレイブ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#2E9BE6; --sky-dark:#1B7FC4; --sky-soft:#E3F3FF; --sky-mid:#BFE3FA;
+  --cream:#F4FAFF; --cream-dark:#E8F4FD; --sun:#FFC93C; --sun-soft:#FFF4CC;
+  --ink:#1F3347; --ink-soft:#56697B; --line:#D3E7F5; --card:#FFFFFF;
+  --shadow:0 10px 30px rgba(30,110,170,.13); --shadow-lg:0 18px 44px rgba(30,110,170,.18);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN",sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(244,250,255,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--line)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+.brand{font-weight:800;font-size:18px;text-decoration:none}
+.brand small{display:block;font-size:11px;font-weight:500;color:var(--ink-soft);line-height:1.2}
+.hero{padding:52px 0 36px;text-align:center;background:radial-gradient(circle at 12% 20%, #CFEBFF 0, transparent 340px),radial-gradient(circle at 88% 8%, #FFF1BF 0, transparent 300px),var(--cream)}
+.hero h1{font-size:clamp(28px,6vw,44px);line-height:1.3;font-weight:800;margin:14px 0 12px}
+.hero h1 .hl{color:var(--sky)}
+.hero p{color:var(--ink-soft);font-weight:500;margin:0 auto;max-width:560px}
+.badge{display:inline-block;font-size:12.5px;font-weight:800;padding:4px 14px;border-radius:999px;background:var(--sun-soft);color:#8A6500}
+.icon{width:84px;height:84px;border-radius:20px;margin:0 auto 14px;display:grid;place-items:center;font-size:40px;background:linear-gradient(135deg,#8FD0FA,#2E9BE6);box-shadow:var(--shadow)}
+section{padding:26px 0 56px}
+.card{background:#fff;border-radius:28px;box-shadow:var(--shadow);padding:28px 24px;max-width:720px;margin:0 auto 22px}
+.card h2{font-size:20px;margin:0 0 12px;line-height:1.45}
+.card p{margin:0;color:var(--ink-soft);font-weight:500}
+.legal-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.legal-list a{display:flex;justify-content:space-between;align-items:center;gap:10px;text-decoration:none;font-weight:800;background:var(--cream);border:2px solid var(--line);border-radius:16px;padding:13px 18px}
+.legal-list a::after{content:"›";color:var(--sky);font-size:22px;line-height:1}
+.legal-list a:hover{border-color:var(--sky);color:var(--sky-dark)}
+.btn{display:inline-flex;align-items:center;background:var(--sky);color:#fff;font-weight:800;text-decoration:none;padding:11px 22px;border-radius:999px;font-size:14.5px;box-shadow:0 8px 20px rgba(46,155,230,.3)}
+.btn:hover{background:var(--sky-dark)}
+.btn.ghost{background:#fff;color:var(--ink);border:2px solid var(--line);box-shadow:none}
+.back{max-width:720px;margin:0 auto 18px;font-size:14px;font-weight:700}
+.back a{color:var(--sky-dark);text-decoration:none}
+.back a:hover{text-decoration:underline}
+.doc{max-width:720px;margin:0 auto;background:#fff;border-radius:28px;box-shadow:var(--shadow);padding:34px 28px 40px;font-size:15.5px}
+@media(max-width:520px){.doc{padding:24px 18px 30px;border-radius:22px}}
+.doc h1{font-size:clamp(22px,5vw,28px);line-height:1.4;margin:0 0 14px;padding-bottom:12px;border-bottom:3px solid var(--sky-mid)}
+.doc h2{font-size:18px;line-height:1.5;margin:34px 0 10px;padding-left:12px;border-left:5px solid var(--sky)}
+.doc h3{font-size:16px;line-height:1.5;margin:24px 0 8px;color:var(--sky-dark)}
+.doc p{margin:0 0 12px;white-space:pre-line}
+.doc ol,.doc ul{margin:0 0 12px;padding-left:1.7em}
+.doc li{margin:0 0 6px;white-space:pre-line}
+.doc li>ul,.doc li>ol{white-space:normal;margin-top:6px}
+.doc strong{font-weight:800}
+.doc a{color:var(--sky-dark);word-break:break-all}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 16px;border:1.5px solid var(--line);border-radius:14px}
+.doc table{border-collapse:collapse;min-width:560px;width:100%;font-size:14px}
+.doc th,.doc td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;line-height:1.65}
+.doc th{background:var(--sky-soft);white-space:nowrap}
+.doc tr:last-child td{border-bottom:0}
+.doc td:first-child{font-weight:700;background:#FAFDFF;white-space:nowrap}
+.doc table.wide td:first-child{white-space:normal;min-width:7em}
+.doc td{min-width:220px}
+.doc td:first-child{min-width:0}
+footer{border-top:2px solid var(--line);padding:26px 0 34px;text-align:center;color:var(--ink-soft);font-size:13.5px;font-weight:500}
+footer .flinks{display:flex;gap:8px 18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;font-weight:700}
+footer a{color:var(--sky-dark);font-weight:700;text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer p{margin:0 0 6px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap header-in">
+    <a class="brand" href="./">タイムブレイブ<small>TimeBrave サポートページ</small></a>
+    <a class="btn small" href="../" style="padding:8px 16px;font-size:13px">アプリ一覧</a>
+  </div>
+</header>
+
+<main>
+<section>
+<div class="wrap">
+<div class="back"><a href="./">‹ タイムブレイブのトップへ戻る</a></div>
+<article class="doc">
+<h1>特定商取引法に基づく表記（タイムブレイブ）</h1>
+<p>最終更新日: 2026年11月27日</p>
+<div class="table-scroll"><table>
+<thead><tr><th>項目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>販売事業者</td><td>請求があった場合には、遅滞なく開示いたします。</td></tr>
+<tr><td>所在地</td><td>請求があった場合には、遅滞なく開示いたします。</td></tr>
+<tr><td>電話番号</td><td>請求があった場合には、遅滞なく開示いたします。</td></tr>
+<tr><td>メールアドレス</td><td><a href="mailto:mykodu.support@gmail.com">mykodu.support@gmail.com</a><br>（販売事業者・所在地・電話番号の開示のご請求も、こちらで受け付けます）</td></tr>
+<tr><td>運営責任者</td><td>販売事業者と同じです（個人で運営しています）。</td></tr>
+<tr><td>販売するもの</td><td>iOS向けゲームアプリ「タイムブレイブ」内で使える次の商品（アプリ内課金）<br>・時石パック：アイテム「時石」（消耗型）<br>・初回限定パック：アイテム「時石」（非消耗型。お一人様1回限り。時石は購入した端末にだけ届きます）<br>・ブレイブパス：1か月ごとに自動更新される定期購入（自動更新サブスクリプション）。加入中は、加入時と毎月の更新時に時石30個、ログインボーナスの増量（1日2個→5個）、広告を見ずに広告の報酬を受け取れる特典があります（広告の報酬の回数の上限〈1日3回〉は加入していないときと同じです）</td></tr>
+<tr><td>販売価格</td><td>本アプリの「時石ショップ」画面・「ブレイブパス」画面に、数量と価格（税込）を表示しています。<br>・時石パック: 時石15個 160円／時石50個 480円／時石110個 980円／時石230個 1,980円／時石600個 4,900円／時石1,250個 9,800円<br>・初回限定パック: 時石150個 980円（お一人様1回限り）<br>・ブレイブパス: 月額 480円（1か月ごとに自動更新）<br>（いずれも税込）<br>価格は App Store が表示する金額によるものとし、App Store の価格の改定などにより変わることがあります。</td></tr>
+<tr><td>商品代金以外に必要な料金</td><td>アプリのダウンロード、および利用時のインターネット接続にかかる通信料は、お客様のご負担となります。</td></tr>
+<tr><td>支払方法</td><td>App Store のアプリ内課金（Apple が定める支払方法）</td></tr>
+<tr><td>支払時期</td><td>・時石パック・初回限定パック: 購入手続きの完了時に、Apple の定めるところにより、お客様の Apple Account に請求されます。<br>・ブレイブパス: 最初の1か月分は加入の手続きの完了時に、2か月目以降は各期間が終わる前の24時間以内に、自動更新の料金として、お客様の Apple Account に請求されます。</td></tr>
+<tr><td>商品の引渡時期</td><td>通常、購入手続きの完了後すぐにアプリ内に反映されます（通信の状況により遅れることがあります）。保護者の承認が必要な設定（承認と購入のリクエスト）の場合は、承認された後に反映されます。<br><strong>初回限定パックの時石は、購入した端末にだけお届けします。</strong> 同じ Apple Account でサインインしている別の端末（iPhone・iPad）では受け取れません。<br>ブレイブパスの特典は、加入の手続きの完了後すぐに使えるようになり、期間の終わりまで使えます（時石30個は、加入時と毎月の更新時に、端末ごとにお届けします）。<br>機種変更やアプリの入れ直しのあとは、本アプリの「ブレイブパス」画面・設定・「時石ショップ」画面の「購入を復元」で、ブレイブパスの加入状態と初回限定パックの購入済みの状態が戻ります（時石は戻りません）。</td></tr>
+<tr><td>返品・キャンセル</td><td>デジタルコンテンツの性質上、購入手続きの完了後の返品・キャンセル（払い戻し）はお受けできません。ただし、法令で定められている場合は除きます。<br>購入についての返金のご希望は、Apple の定める手続き（<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">https://reportaproblem.apple.com</a> など）で Apple にお申し出ください。返金するかどうかは Apple が判断します。</td></tr>
+<tr><td>ブレイブパスの解約</td><td>いつでも解約できます。iPhone／iPad の「設定」アプリ →（ご自分の名前）→「サブスクリプション」、または本アプリの「ブレイブパス」画面の「サブスクリプションを管理」から行ってください。期間が終わる24時間前までに解約しない限り、自動で更新されます。<br>解約しても、その期間の終わりまでは特典を使えます。期間の途中で解約した場合でも、残りの期間の料金の日割りでの返金はありません。本アプリを削除しても解約にはなりません。</td></tr>
+<tr><td>動作環境</td><td>iOS 17.0 以降を搭載した iPhone、および iPadOS 17.0 以降を搭載した iPad（iPad では縦向きの全画面表示で動作します）<br>インターネット接続が必要な機能: 時石・ブレイブパスの購入、広告の視聴、ランキング、対戦（フレンド・ランダム）<br>ゲームのデータはお使いの端末の中だけに保存され、別の端末への引き継ぎ（機種変更時を含みます）はできません。</td></tr>
+<tr><td>販売数量の制限など</td><td>初回限定パックは、お一人様1回限り（1つの Apple Account につき1回だけ）購入できます。時石は購入した端末にだけ届き、同じ Apple Account の別の端末では受け取れません。ゲームのデータを消したり、アプリを入れ直したりしたあとも、もう一度購入することや、時石を受け取り直すことはできません。</td></tr>
+<tr><td>申込みの有効期限</td><td>ありません（期間を限定して販売する商品がある場合は、その購入画面に期間を表示します）。</td></tr>
+<tr><td>時石の有効期限</td><td>ありません。</td></tr>
+</tbody>
+</table></div>
+<p>時石について詳しくは「資金決済法に基づく表示」と「利用規約」を、ブレイブパスについて詳しくは「利用規約」第13条をご覧ください。</p>
+</article>
+<div class="back" style="margin:22px auto 0"><a href="./">‹ タイムブレイブのトップへ戻る</a></div>
+</div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks"><a href="privacy-policy.html">プライバシーポリシー</a><a href="terms-of-service.html">利用規約</a><a href="tokushoho.html">特定商取引法に基づく表記</a><a href="payment-services.html">資金決済法に基づく表示</a></div>
+    <p>お問い合わせ：<a href="mailto:mykodu.support@gmail.com">mykodu.support@gmail.com</a></p>
+    <p>© 2026 あおい</p>
+  </div>
+</footer>
+
+</body>
+</html>
