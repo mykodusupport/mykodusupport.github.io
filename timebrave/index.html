@@ -4,34 +4,124 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<meta name="description" content="タイムブレイブ（TimeBrave）の公式サポートページ。目標時間にピッタリ止めて戦う、タイミング操作のバトルRPG（開発中）。">
-<link rel="icon" href="data:,">
-<title>タイムブレイブ｜サポートページ</title>
+<meta name="description" content="タイムブレイブ（TimeBrave）— 目標時間にピッタリSTOPを押すほど強くなる、タイミング操作のバトルRPG。誤差0秒なら一撃必殺。iPhone・iPad対応、基本プレイ無料。開発中・近日公開。">
+<link rel="icon" type="image/png" href="../assets/timebrave-icon.png">
+<link rel="apple-touch-icon" href="../assets/timebrave-icon.png">
+<title>タイムブレイブ｜ピッタリ止めて、一撃必殺。</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --sky:#2E9BE6; --sky-dark:#1B7FC4; --sky-soft:#E3F3FF; --sky-mid:#BFE3FA;
-  --cream:#F4FAFF; --cream-dark:#E8F4FD; --sun:#FFC93C; --sun-soft:#FFF4CC;
+  --cream:#F4FAFF; --cream-dark:#E8F4FD; --sun:#FFC93C; --sun-soft:#FFF4CC; --sun-dark:#8A6500;
   --ink:#1F3347; --ink-soft:#56697B; --line:#D3E7F5; --card:#FFFFFF;
   --shadow:0 10px 30px rgba(30,110,170,.13); --shadow-lg:0 18px 44px rgba(30,110,170,.18);
+  --radius:24px;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN",sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
+img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--sky);color:#fff;font-weight:800;text-decoration:none;padding:14px 26px;border-radius:999px;box-shadow:0 8px 20px rgba(46,155,230,.33);transition:transform .15s, background .15s;font-size:16px;line-height:1.3;text-align:center}
+a.btn:hover{background:var(--sky-dark);transform:translateY(-2px)}
+.btn.small{padding:8px 16px;font-size:13px}
+.btn.soon{background:#fff;color:var(--ink);border:2px solid var(--sky-mid);box-shadow:none;cursor:default}
+.btn .store-sub{font-size:11px;font-weight:500;color:var(--ink-soft);display:block}
 header.site{position:sticky;top:0;z-index:50;background:rgba(244,250,255,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--line)}
-.header-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
-.brand{font-weight:800;font-size:18px;text-decoration:none}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:18px}
+.brand img{width:42px;height:42px;border-radius:10px;object-fit:cover;background:#fff;flex:none}
 .brand small{display:block;font-size:11px;font-weight:500;color:var(--ink-soft);line-height:1.2}
-.hero{padding:52px 0 36px;text-align:center;background:radial-gradient(circle at 12% 20%, #CFEBFF 0, transparent 340px),radial-gradient(circle at 88% 8%, #FFF1BF 0, transparent 300px),var(--cream)}
-.hero h1{font-size:clamp(28px,6vw,44px);line-height:1.3;font-weight:800;margin:14px 0 12px}
-.hero h1 .hl{color:var(--sky)}
-.hero p{color:var(--ink-soft);font-weight:500;margin:0 auto;max-width:560px}
-.badge{display:inline-block;font-size:12.5px;font-weight:800;padding:4px 14px;border-radius:999px;background:var(--sun-soft);color:#8A6500}
-.icon{width:84px;height:84px;border-radius:20px;margin:0 auto 14px;display:grid;place-items:center;font-size:40px;background:linear-gradient(135deg,#8FD0FA,#2E9BE6);box-shadow:var(--shadow)}
-section{padding:26px 0 56px}
+nav.links{display:none;gap:22px;font-size:14px;font-weight:700}
+nav.links a{text-decoration:none;color:var(--ink-soft)}
+nav.links a:hover{color:var(--sky-dark)}
+@media(min-width:820px){nav.links{display:flex}}
+/* hero */
+.hero{padding:44px 0 56px;background:radial-gradient(circle at 12% 20%, #CFEBFF 0, transparent 340px),radial-gradient(circle at 88% 8%, #FFF1BF 0, transparent 300px),var(--cream);overflow:hidden}
+.hero-grid{display:grid;gap:36px;align-items:center}
+@media(min-width:860px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+.hero-icon{width:96px;height:96px;border-radius:23px;box-shadow:var(--shadow);margin-bottom:16px;background:#fff}
+.badge{display:inline-block;background:var(--sun-soft);color:var(--sun-dark);font-weight:800;font-size:13px;padding:5px 14px;border-radius:999px}
+.hero h1{font-size:clamp(34px,7vw,56px);line-height:1.25;font-weight:800;margin:18px 0 16px;letter-spacing:.01em}
+.hero h1 .hl{color:var(--sky);white-space:nowrap}
+.hero .sub{font-size:clamp(16px,2.6vw,19px);color:var(--ink-soft);font-weight:500;margin:0 0 26px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hero-meta span{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:5px 13px;font-size:13px;font-weight:700;color:var(--ink-soft)}
+.hero-phone{position:relative;max-width:300px;margin:0 auto;width:100%}
+.hero-phone::before{content:"";position:absolute;inset:6% -8% -4% -8%;background:var(--sky-mid);border-radius:50% 50% 46% 54%/58% 56% 44% 42%;z-index:0;opacity:.6}
+.phone{position:relative;z-index:1;border-radius:38px;overflow:hidden;box-shadow:var(--shadow-lg);border:6px solid #fff;background:#fff}
+.phone img{width:100%;height:auto}
+/* sections */
+section{padding:64px 0}
+.sec-head{max-width:680px;margin:0 auto 36px;text-align:center}
+.sec-head .kicker{display:inline-block;font-size:13px;font-weight:800;color:var(--sky-dark);background:var(--sky-soft);padding:4px 14px;border-radius:999px;margin-bottom:12px}
+.sec-head .kicker.sun{color:var(--sun-dark);background:var(--sun-soft)}
+.sec-head h2{font-size:clamp(25px,4.6vw,36px);line-height:1.4;margin:0 0 10px;font-weight:800}
+.sec-head p{color:var(--ink-soft);margin:0;font-weight:500}
+.bg-white{background:#fff}
+.bg-cream-dark{background:var(--cream-dark)}
+/* about */
+.flow{display:grid;gap:16px;counter-reset:step}
+@media(min-width:760px){.flow{grid-template-columns:repeat(3,1fr)}}
+.step{background:#fff;border:2px solid var(--line);border-radius:var(--radius);padding:26px 22px;position:relative}
+.step::before{counter-increment:step;content:counter(step);width:38px;height:38px;border-radius:12px;background:var(--sky);color:#fff;font-weight:800;font-size:18px;display:grid;place-items:center;margin-bottom:12px}
+.step h3{margin:0 0 8px;font-size:18px;line-height:1.5}
+.step p{margin:0;color:var(--ink-soft);font-size:14.5px}
+.flow-note{max-width:760px;margin:22px auto 0;text-align:center;background:var(--sun-soft);border-radius:18px;padding:16px 22px;font-weight:700;font-size:15px}
+.flow-note b{color:var(--sun-dark)}
+/* features */
+.feat-grid{display:grid;gap:18px}
+@media(min-width:860px){.feat-grid{grid-template-columns:repeat(3,1fr)}}
+.feat{background:var(--card);border-radius:28px;padding:28px 24px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.feat .num{width:44px;height:44px;border-radius:14px;background:var(--sky);color:#fff;font-weight:800;font-size:20px;display:grid;place-items:center;margin-bottom:16px}
+.feat:nth-child(2) .num{background:#F2A93B}
+.feat:nth-child(3) .num{background:#3FB58A}
+.feat h3{margin:0 0 10px;font-size:20px;line-height:1.5}
+.feat p{margin:0;color:var(--ink-soft);font-size:14.5px;flex:1}
+.entrances{list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:2px dashed var(--line);display:grid;gap:7px;font-size:13.5px;font-weight:700}
+.entrances li{display:flex;gap:8px;align-items:baseline}
+.entrances li::before{content:"✓";color:var(--sky);font-weight:800}
+/* gallery */
+.gallery{display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.gallery{grid-template-columns:repeat(4,1fr)}}
+.gallery figure{margin:0}
+.gallery .phone{border-radius:28px;border-width:5px}
+.gallery figcaption{text-align:center;font-weight:800;font-size:14.5px;margin-top:12px;line-height:1.5}
+.gallery figcaption small{display:block;font-weight:500;color:var(--ink-soft);font-size:12.5px}
+.shot-note{text-align:center;color:var(--ink-soft);font-size:13px;margin:22px 0 0;font-weight:500}
+/* pricing */
+.price-grid{display:grid;gap:18px;max-width:1000px;margin:0 auto}
+@media(min-width:860px){.price-grid{grid-template-columns:repeat(3,1fr)}}
+.plan{background:#fff;border:2px solid var(--line);border-radius:28px;padding:30px 24px;display:flex;flex-direction:column;position:relative}
+.plan.pass{border-color:var(--sky);box-shadow:var(--shadow-lg)}
+.plan .ribbon{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--sky);color:#fff;font-size:12.5px;font-weight:800;padding:4px 16px;border-radius:999px;white-space:nowrap}
+.plan h3{margin:0;font-size:19px}
+.plan .amount{font-size:32px;font-weight:800;margin:8px 0 2px}
+.plan .amount small{font-size:14px;font-weight:700;color:var(--ink-soft)}
+.plan .per{color:var(--ink-soft);font-size:13.5px;font-weight:700;margin-bottom:16px}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:14.5px}
+.plan li{display:flex;gap:9px}
+.plan li::before{content:"✓";color:var(--sky);font-weight:800;flex:none}
+.stone-table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:4px}
+.stone-table td{padding:7px 0;border-bottom:1px dashed var(--line)}
+.stone-table tr:last-child td{border-bottom:0}
+.stone-table td:last-child{text-align:right;font-weight:800;white-space:nowrap}
+.price-note{max-width:1000px;margin:22px auto 0;text-align:center;background:var(--sky-soft);border-radius:18px;padding:18px 22px;font-weight:700;font-size:15px}
+.price-note b{color:var(--sky-dark)}
+.price-fine{max-width:1000px;margin:14px auto 0;text-align:center;font-size:13px;color:var(--ink-soft);font-weight:500}
+.price-fine a{color:var(--sky-dark);font-weight:700}
+/* faq */
+.faq-list{max-width:760px;margin:0 auto;display:grid;gap:12px}
+details.faq{background:#fff;border:2px solid var(--line);border-radius:18px;padding:4px 22px}
+details.faq summary{cursor:pointer;font-weight:800;font-size:16px;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--sky);font-size:22px;font-weight:800;line-height:1;flex:none}
+details.faq[open] summary::after{content:"−"}
+details.faq p{margin:0 0 16px;color:var(--ink-soft);font-size:14.5px;font-weight:500}
+/* support */
 .card{background:#fff;border-radius:28px;box-shadow:var(--shadow);padding:28px 24px;max-width:720px;margin:0 auto 22px}
 .card h2{font-size:20px;margin:0 0 12px;line-height:1.45}
 .card p{margin:0;color:var(--ink-soft);font-weight:500}
@@ -39,32 +129,12 @@ section{padding:26px 0 56px}
 .legal-list a{display:flex;justify-content:space-between;align-items:center;gap:10px;text-decoration:none;font-weight:800;background:var(--cream);border:2px solid var(--line);border-radius:16px;padding:13px 18px}
 .legal-list a::after{content:"›";color:var(--sky);font-size:22px;line-height:1}
 .legal-list a:hover{border-color:var(--sky);color:var(--sky-dark)}
-.btn{display:inline-flex;align-items:center;background:var(--sky);color:#fff;font-weight:800;text-decoration:none;padding:11px 22px;border-radius:999px;font-size:14.5px;box-shadow:0 8px 20px rgba(46,155,230,.3)}
-.btn:hover{background:var(--sky-dark)}
-.btn.ghost{background:#fff;color:var(--ink);border:2px solid var(--line);box-shadow:none}
-.back{max-width:720px;margin:0 auto 18px;font-size:14px;font-weight:700}
-.back a{color:var(--sky-dark);text-decoration:none}
-.back a:hover{text-decoration:underline}
-.doc{max-width:720px;margin:0 auto;background:#fff;border-radius:28px;box-shadow:var(--shadow);padding:34px 28px 40px;font-size:15.5px}
-@media(max-width:520px){.doc{padding:24px 18px 30px;border-radius:22px}}
-.doc h1{font-size:clamp(22px,5vw,28px);line-height:1.4;margin:0 0 14px;padding-bottom:12px;border-bottom:3px solid var(--sky-mid)}
-.doc h2{font-size:18px;line-height:1.5;margin:34px 0 10px;padding-left:12px;border-left:5px solid var(--sky)}
-.doc h3{font-size:16px;line-height:1.5;margin:24px 0 8px;color:var(--sky-dark)}
-.doc p{margin:0 0 12px;white-space:pre-line}
-.doc ol,.doc ul{margin:0 0 12px;padding-left:1.7em}
-.doc li{margin:0 0 6px;white-space:pre-line}
-.doc li>ul,.doc li>ol{white-space:normal;margin-top:6px}
-.doc strong{font-weight:800}
-.doc a{color:var(--sky-dark);word-break:break-all}
-.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 16px;border:1.5px solid var(--line);border-radius:14px}
-.doc table{border-collapse:collapse;min-width:560px;width:100%;font-size:14px}
-.doc th,.doc td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;line-height:1.65}
-.doc th{background:var(--sky-soft);white-space:nowrap}
-.doc tr:last-child td{border-bottom:0}
-.doc td:first-child{font-weight:700;background:#FAFDFF;white-space:nowrap}
-.doc table.wide td:first-child{white-space:normal;min-width:7em}
-.doc td{min-width:220px}
-.doc td:first-child{min-width:0}
+/* cta */
+.cta{background:linear-gradient(160deg,#5DB8F2,#2E9BE6);border-radius:36px;padding:52px 24px;text-align:center;color:#fff;box-shadow:var(--shadow-lg)}
+.cta h2{font-size:clamp(27px,5.4vw,42px);margin:0 0 12px;line-height:1.35}
+.cta p{margin:0 auto 26px;max-width:520px;font-weight:500}
+.cta .soon-pill{display:inline-block;background:#fff;color:var(--sky-dark);font-weight:800;padding:12px 28px;border-radius:999px;font-size:16px}
+.cta .meta{margin-top:16px;font-size:13px;font-weight:700}
 footer{border-top:2px solid var(--line);padding:26px 0 34px;text-align:center;color:var(--ink-soft);font-size:13.5px;font-weight:500}
 footer .flinks{display:flex;gap:8px 18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;font-weight:700}
 footer a{color:var(--sky-dark);font-weight:700;text-decoration:none}
@@ -76,36 +146,203 @@ footer p{margin:0 0 6px}
 
 <header class="site">
   <div class="wrap header-in">
-    <a class="brand" href="./">タイムブレイブ<small>TimeBrave サポートページ</small></a>
-    <a class="btn small" href="../" style="padding:8px 16px;font-size:13px">アプリ一覧</a>
+    <a class="brand" href="#top">
+      <img src="../assets/timebrave-icon.png" alt="タイムブレイブのアプリアイコン" width="42" height="42">
+      <span>タイムブレイブ<small>TimeBrave</small></span>
+    </a>
+    <nav class="links" aria-label="ページ内リンク">
+      <a href="#about">遊び方</a><a href="#features">特徴</a><a href="#screens">画面</a><a href="#price">料金</a><a href="#faq">FAQ</a><a href="#support">規約・お問い合わせ</a>
+    </nav>
+    <a class="btn small" href="../">アプリ一覧</a>
   </div>
 </header>
 
-<main>
-  <div class="hero">
-    <div class="wrap">
-      <div class="icon" aria-hidden="true">⏱️</div>
-      <span class="badge">開発中</span>
-      <h1>タイムブレイブ<br><span class="hl">ピッタリ止めて、一撃必殺。</span></h1>
-      <p>目標時間に合わせてSTART／STOPを押す、タイミング操作のバトルRPGです。誤差が小さいほどダメージが大きくなります。</p>
+<main id="top">
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <img class="hero-icon" src="../assets/timebrave-icon.png" alt="タイムブレイブのアプリアイコン" width="96" height="96">
+      <span class="badge">開発中・近日公開</span>
+      <h1>ピッタリ止めて、<br><span class="hl">一撃必殺。</span></h1>
+      <p class="sub">あなたのタイミングが、最強の武器になる。<br>目標時間に合わせてSTOPを押す、<br>タイミング操作のバトルRPGです。</p>
+      <span class="btn soon"><span>App Storeで近日公開<span class="store-sub">配信が始まったら、このページでお知らせします</span></span></span>
+      <div class="hero-meta">
+        <span>iPhone・iPad対応（iOS 17以降）</span><span>基本プレイ無料</span><span>日本語</span>
+      </div>
+    </div>
+    <div class="hero-phone">
+      <div class="phone"><img src="images/home.jpg" alt="ホーム画面：パーティの3人と「冒険へ」ボタン、ガチャ・ミッション・編成・ランキング・対戦・記録のメニュー" width="620" height="1348"></div>
     </div>
   </div>
-  <section>
-    <div class="wrap">
-      <div class="card">
-        <h2>いま開発中です</h2>
-        <p>タイムブレイブ（TimeBrave）は現在開発中のiPhoneアプリです。配信が始まりましたら、このページでお知らせします。</p>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker sun">こんなゲーム</span>
+      <h2>操作は、START と STOP だけ</h2>
+      <p>むずかしい操作はありません。大事なのは、体で覚えた時間の感覚です。</p>
+    </div>
+    <div class="flow">
+      <div class="step"><h3>目標時間が出る</h3><p>毎ターン「2.45秒」のような目標時間が表示されます。</p></div>
+      <div class="step"><h3>STARTで計測、感覚でSTOP</h3><p>STARTを押したら、ちょうど目標の時間だと思うところでSTOP。敵によっては、ゲージが見えなくなります。</p></div>
+      <div class="step"><h3>誤差が小さいほど大ダメージ</h3><p>目標とのズレが小さいほど、味方の攻撃が強くなります。ズレが大きいと、ダメージは小さくなります。</p></div>
+    </div>
+    <p class="flow-note"><b>誤差がちょうど0なら「EXCELLENT」</b>。どんな敵でも一撃で倒せて、キャラごとの必殺技ムービーが流れます。</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="bg-white" id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">3つの特徴</span>
+      <h2>遊びごたえは、この3つ</h2>
+      <p>シンプルな操作の中に、考える楽しさと、競う楽しさを入れました。</p>
+    </div>
+    <div class="feat-grid">
+      <article class="feat">
+        <div class="num">1</div>
+        <h3>20ステージの冒険と、<br>21人の仲間</h3>
+        <p>ステージを進めて、ボスを倒す冒険モード。ボスごとに「ゲージが消える」「目標の数字が隠れる」など、見え方のルールが変わります。仲間は3人でパーティを組み、1人ずつ順番に戦います。</p>
+        <ul class="entrances">
+          <li>全20ステージ・ステージごとに違うボス</li><li>仲間は全21人、それぞれ固有の特性</li><li>ストーリー付き</li>
+        </ul>
+      </article>
+      <article class="feat">
+        <div class="num">2</div>
+        <h3>ガチャで仲間を集める</h3>
+        <p>ゲームの中で手に入る「時石」を使って、ガチャで仲間を呼べます。同じ仲間が出るとレベルアップ。冒険のクリアやミッション、ログインボーナス、広告の視聴などで、無料でも時石が貯まります。</p>
+        <ul class="entrances">
+          <li>ステージの初クリアで時石</li><li>毎日のミッション・ログインボーナス</li><li>確率は、ガチャ画面の「提供割合」で確認できます</li>
+        </ul>
+      </article>
+      <article class="feat">
+        <div class="num">3</div>
+        <h3>みんなと競える、<br>ランキングと対戦</h3>
+        <p>毎週問題が入れ替わるスコアアタックのランキングと、1対1の対戦があります。対戦は、フレンドやランダムな相手とのオンライン対戦のほか、近くの人とのBluetooth対戦にも対応しています。</p>
+        <ul class="entrances">
+          <li>週替わりの全国ランキング（Game Center）</li><li>フレンド・ランダム対戦</li><li>近くの人と遊べる近距離対戦</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENS -->
+<section class="bg-cream-dark" id="screens">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">画面の紹介</span>
+      <h2>こんな画面で遊びます</h2>
+      <p>開発中のアプリの画面です。実際の配信版とは、細かい部分が変わることがあります。</p>
+    </div>
+    <div class="gallery">
+      <figure><div class="phone"><img src="images/battle.jpg" alt="バトル画面：敵のHPと目標時間2.78秒、STARTとSTOPのボタン" width="620" height="1348" loading="lazy"></div><figcaption>バトル<small>目標時間にSTOPを合わせる</small></figcaption></figure>
+      <figure><div class="phone"><img src="images/victory.jpg" alt="勝利画面：VICTORYの表示と獲得報酬" width="620" height="1348" loading="lazy"></div><figcaption>勝利<small>倒すとコインや時石を獲得</small></figcaption></figure>
+      <figure><div class="phone"><img src="images/gacha.jpg" alt="ガチャの召喚結果の画面：仲間が10人並んでいる" width="620" height="1348" loading="lazy"></div><figcaption>ガチャ<small>時石で仲間を呼ぶ</small></figcaption></figure>
+      <figure><div class="phone"><img src="images/versus.jpg" alt="対戦ロビー：パーティとルール、近距離対戦・フレンド・ランダムの選択" width="620" height="1348" loading="lazy"></div><figcaption>対戦<small>近距離・フレンド・ランダム</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="bg-white" id="price">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker sun">料金</span>
+      <h2>基本プレイは無料です</h2>
+      <p>ゲームは無料で遊べます。ガチャに使う「時石」と、月額の「ブレイブパス」は、アプリ内で購入できます（任意です）。</p>
+    </div>
+    <div class="price-grid">
+      <div class="plan">
+        <h3>時石パック</h3>
+        <div class="amount">¥160〜 <small>税込</small></div>
+        <div class="per">ガチャに使う「時石」を購入（消耗型）</div>
+        <table class="stone-table">
+          <tr><td>時石15個</td><td>¥160</td></tr>
+          <tr><td>時石50個</td><td>¥480</td></tr>
+          <tr><td>時石110個</td><td>¥980</td></tr>
+          <tr><td>時石230個</td><td>¥1,980</td></tr>
+          <tr><td>時石600個</td><td>¥4,900</td></tr>
+          <tr><td>時石1,250個</td><td>¥9,800</td></tr>
+        </table>
       </div>
-      <div class="card">
-        <h2>規約・ポリシー</h2>
-        <ul class="legal-list"><li><a href="privacy-policy.html">プライバシーポリシー</a></li><li><a href="terms-of-service.html">利用規約</a></li><li><a href="tokushoho.html">特定商取引法に基づく表記</a></li><li><a href="payment-services.html">資金決済法に基づく表示</a></li></ul>
+      <div class="plan">
+        <h3>初回限定パック</h3>
+        <div class="amount">¥980 <small>税込</small></div>
+        <div class="per">お一人様1回限り</div>
+        <ul>
+          <li>時石150個</li>
+          <li>時石は、購入した端末にだけ届きます</li>
+        </ul>
       </div>
-      <div class="card">
-        <h2>お問い合わせ</h2>
-        <p>ご質問・ご要望・不具合のご連絡は、こちらのメールアドレスまでお願いします。<br><a href="mailto:mykodu.support@gmail.com" style="color:var(--sky-dark);font-weight:800">mykodu.support@gmail.com</a></p>
+      <div class="plan pass">
+        <span class="ribbon">月額・自動更新</span>
+        <h3>ブレイブパス</h3>
+        <div class="amount">¥480 <small>／月（税込）</small></div>
+        <div class="per">加入中の特典が3つあります</div>
+        <ul>
+          <li>加入時と、毎月の更新時に、時石30個</li>
+          <li>ログインボーナスが、1日2個から5個に</li>
+          <li>広告を見なくても、広告の報酬を受け取れる</li>
+        </ul>
       </div>
     </div>
-  </section>
+    <p class="price-note">ブレイブパスの特典は、<b>対戦・ランキングの強さには関係ありません</b>。<br>いつでも解約できます（iPhone・iPadの設定、またはアプリ内から）。</p>
+    <p class="price-fine">価格はすべて税込です。くわしくは<a href="tokushoho.html">特定商取引法に基づく表記</a>、<a href="payment-services.html">資金決済法に基づく表示</a>、<a href="terms-of-service.html">利用規約</a>をご覧ください。</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">よくある質問</span>
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq"><summary>Q. お金をかけないと遊べませんか？</summary><p>いいえ。冒険・ランキング・対戦は、基本プレイ無料で遊べます。時石の購入とブレイブパスは任意です。</p></details>
+      <details class="faq"><summary>Q. ガチャの確率は分かりますか？</summary><p>アプリのガチャ画面にある「提供割合」から、確率とルールを確認できます。</p></details>
+      <details class="faq"><summary>Q. ブレイブパスは解約できますか？</summary><p>いつでも解約できます。iPhone・iPadの「設定」アプリ →（ご自分の名前）→「サブスクリプション」、またはアプリ内の「ブレイブパス」画面から行ってください。期間が終わる24時間前までに解約しないと、自動で更新されます。解約しても、その期間の終わりまでは特典を使えます。</p></details>
+      <details class="faq"><summary>Q. インターネットは必要ですか？</summary><p>時石・ブレイブパスの購入、広告の視聴、ランキング、フレンド・ランダム対戦には、インターネット接続が必要です。</p></details>
+      <details class="faq"><summary>Q. 機種変更したらデータは引き継げますか？</summary><p>ゲームのデータはお使いの端末の中だけに保存され、別の端末への引き継ぎはできません。ブレイブパスの加入状態と初回限定パックの購入済みの状態は、アプリ内の「購入を復元」で戻せます（時石は戻りません）。</p></details>
+      <details class="faq"><summary>Q. どの機種で遊べますか？</summary><p>iOS 17.0以降のiPhone、およびiPadOS 17.0以降のiPadで遊べます。iPadでは縦向きの全画面表示になります。Androidには対応していません。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="bg-white" id="support">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">サポート</span>
+      <h2>規約・お問い合わせ</h2>
+    </div>
+    <div class="card">
+      <h2>規約・ポリシー</h2>
+      <ul class="legal-list"><li><a href="privacy-policy.html">プライバシーポリシー</a></li><li><a href="terms-of-service.html">利用規約</a></li><li><a href="tokushoho.html">特定商取引法に基づく表記</a></li><li><a href="payment-services.html">資金決済法に基づく表示</a></li></ul>
+    </div>
+    <div class="card" style="margin-bottom:0">
+      <h2>お問い合わせ</h2>
+      <p>ご質問・ご要望・不具合のご連絡は、こちらのメールアドレスまでお願いします。<br><a href="mailto:mykodu.support@gmail.com" style="color:var(--sky-dark);font-weight:800">mykodu.support@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding-top:56px">
+  <div class="wrap">
+    <div class="cta">
+      <h2>ピッタリ止めて、<br>一撃必殺。</h2>
+      <p>タイムブレイブは、いま開発中です。配信が始まりましたら、このページでお知らせします。</p>
+      <span class="soon-pill">App Storeで近日公開</span>
+      <div class="meta">iPhone・iPad対応（iOS 17以降）／基本プレイ無料</div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
