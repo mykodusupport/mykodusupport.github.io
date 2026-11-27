@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<meta name="description" content="タイムブレイブ（TimeBrave）— 目標時間にピッタリSTOPを押すほど強くなる、タイミング操作のバトルRPG。誤差0秒なら一撃必殺。iPhone・iPad対応、基本プレイ無料。開発中・近日公開。">
+<meta name="description" content="タイムブレイブ（TimeBrave）— 目標時間にピッタリSTOPを押すほど強くなる、タイミング操作のバトルRPG。誤差0秒なら一撃必殺。友達とも対戦できます。iPhone・iPad対応、基本プレイ無料。開発中・近日公開。">
 <link rel="icon" type="image/png" href="../assets/timebrave-icon.png">
 <link rel="apple-touch-icon" href="../assets/timebrave-icon.png">
 <title>タイムブレイブ｜ピッタリ止めて、一撃必殺。</title>
@@ -50,6 +50,8 @@ nav.links a:hover{color:var(--sky-dark)}
 .hero .sub{font-size:clamp(16px,2.6vw,19px);color:var(--ink-soft);font-weight:500;margin:0 0 26px}
 .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .hero-meta span{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:5px 13px;font-size:13px;font-weight:700;color:var(--ink-soft)}
+.hero .sub-hl{color:var(--sky-dark);font-weight:800}
+.hero-meta span.hot{background:var(--sky);border-color:var(--sky);color:#fff}
 .hero-phone{position:relative;max-width:300px;margin:0 auto;width:100%}
 .hero-phone::before{content:"";position:absolute;inset:6% -8% -4% -8%;background:var(--sky-mid);border-radius:50% 50% 46% 54%/58% 56% 44% 42%;z-index:0;opacity:.6}
 .phone{position:relative;z-index:1;border-radius:38px;overflow:hidden;box-shadow:var(--shadow-lg);border:6px solid #fff;background:#fff}
@@ -72,6 +74,25 @@ section{padding:64px 0}
 .step p{margin:0;color:var(--ink-soft);font-size:14.5px}
 .flow-note{max-width:760px;margin:22px auto 0;text-align:center;background:var(--sun-soft);border-radius:18px;padding:16px 22px;font-weight:700;font-size:15px}
 .flow-note b{color:var(--sun-dark)}
+/* versus */
+.vs-grid{display:grid;gap:18px;max-width:900px;margin:0 auto}
+@media(min-width:760px){.vs-grid{grid-template-columns:1fr 1fr}}
+.vs-card{background:#fff;border:2px solid var(--line);border-radius:28px;padding:28px 24px;box-shadow:var(--shadow)}
+.vs-card.far{border-color:var(--sky)}
+.vs-tag{display:inline-block;font-size:13px;font-weight:800;padding:4px 14px;border-radius:999px;background:var(--sun-soft);color:var(--sun-dark);margin-bottom:10px}
+.vs-card.far .vs-tag{background:var(--sky-soft);color:var(--sky-dark)}
+.vs-card h3{margin:0 0 8px;font-size:22px;line-height:1.45}
+.vs-card p{margin:0;color:var(--ink-soft);font-size:14.5px}
+.vs-card .entrances{margin-top:14px}
+.vs-body{display:grid;gap:28px;align-items:center;max-width:900px;margin:26px auto 0}
+@media(min-width:760px){.vs-body{grid-template-columns:240px 1fr}}
+.vs-body .phone{max-width:240px;margin:0 auto}
+.vs-rules{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-weight:700;font-size:15px}
+.vs-rules li{display:flex;gap:10px;background:#fff;border-radius:16px;padding:12px 16px;border:2px solid var(--line)}
+.vs-rules li::before{content:"✓";color:var(--sky);font-weight:800;flex:none}
+.vs-rules li.fair{background:var(--sun-soft);border-color:var(--sun-soft)}
+.vs-rules li.fair b{color:var(--sun-dark)}
+.vs-fine{max-width:900px;margin:16px auto 0;text-align:center;font-size:13px;color:var(--ink-soft);font-weight:500}
 /* features */
 .feat-grid{display:grid;gap:18px}
 @media(min-width:860px){.feat-grid{grid-template-columns:repeat(3,1fr)}}
@@ -151,7 +172,7 @@ footer p{margin:0 0 6px}
       <span>タイムブレイブ<small>TimeBrave</small></span>
     </a>
     <nav class="links" aria-label="ページ内リンク">
-      <a href="#about">遊び方</a><a href="#features">特徴</a><a href="#screens">画面</a><a href="#price">料金</a><a href="#faq">FAQ</a><a href="#support">規約・お問い合わせ</a>
+      <a href="#about">遊び方</a><a href="#versus">友達と対戦</a><a href="#features">特徴</a><a href="#screens">画面</a><a href="#price">料金</a><a href="#faq">FAQ</a><a href="#support">規約・お問い合わせ</a>
     </nav>
     <a class="btn small" href="../">アプリ一覧</a>
   </div>
@@ -165,10 +186,10 @@ footer p{margin:0 0 6px}
       <img class="hero-icon" src="../assets/timebrave-icon.png" alt="タイムブレイブのアプリアイコン" width="96" height="96">
       <span class="badge">開発中・近日公開</span>
       <h1>ピッタリ止めて、<br><span class="hl">一撃必殺。</span></h1>
-      <p class="sub">あなたのタイミングが、最強の武器になる。<br>目標時間に合わせてSTOPを押す、<br>タイミング操作のバトルRPGです。</p>
+      <p class="sub">あなたのタイミングが、最強の武器になる。<br>目標時間に合わせてSTOPを押す、<br>タイミング操作のバトルRPGです。<br><b class="sub-hl">友達と1対1で対戦もできます。</b></p>
       <span class="btn soon"><span>App Storeで近日公開<span class="store-sub">配信が始まったら、このページでお知らせします</span></span></span>
       <div class="hero-meta">
-        <span>iPhone・iPad対応（iOS 17以降）</span><span>基本プレイ無料</span><span>日本語</span>
+        <span class="hot">友達と対戦できる</span><span>iPhone・iPad対応（iOS 17以降）</span><span>基本プレイ無料</span><span>日本語</span>
       </div>
     </div>
     <div class="hero-phone">
@@ -191,6 +212,42 @@ footer p{margin:0 0 6px}
       <div class="step"><h3>誤差が小さいほど大ダメージ</h3><p>目標とのズレが小さいほど、味方の攻撃が強くなります。ズレが大きいと、ダメージは小さくなります。</p></div>
     </div>
     <p class="flow-note"><b>誤差がちょうど0なら「EXCELLENT」</b>。どんな敵でも一撃で倒せて、キャラごとの必殺技ムービーが流れます。</p>
+  </div>
+</section>
+
+<!-- VERSUS -->
+<section class="bg-cream-dark" id="versus">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">友達と対戦</span>
+      <h2>友達と、タイミングで勝負！</h2>
+      <p>1対1で、同時にSTOP。近くの友達とも、離れた友達とも遊べます。</p>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-card">
+        <span class="vs-tag">近くの友達と</span>
+        <h3>ネットがなくても対戦</h3>
+        <p>近くにいれば、Bluetooth・Wi-Fiで直接つながって対戦できます。インターネットも、Game Centerも要りません。</p>
+        <ul class="entrances"><li>教室や公園、旅行先でもOK</li><li>「近距離対戦」から相手を見つけて招待</li></ul>
+      </div>
+      <div class="vs-card far">
+        <span class="vs-tag">離れた友達と</span>
+        <h3>オンラインで対戦</h3>
+        <p>Game Centerのフレンドを招待して対戦できます。フレンドがいなくても、ランダムな相手と対戦できます。</p>
+        <ul class="entrances"><li>「フレンド」で友達を招待</li><li>「ランダム」でお相手を探す</li></ul>
+      </div>
+    </div>
+    <div class="vs-body">
+      <div class="phone"><img src="images/versus.jpg" alt="対戦ロビー：近距離対戦・フレンド・ランダムの3つから選べる画面" width="620" height="1348" loading="lazy"></div>
+      <ul class="vs-rules">
+        <li>3人ずつのパーティで、先頭同士が戦います</li>
+        <li>両者が同時にSTOP。目標時間に近いほど強い一撃になります</li>
+        <li>先に相手の3人を全員倒したほうの勝ちです</li>
+        <li>招待した人が、「全員レベル1で戦う」か「育てたレベルで戦う」かを選べます（近距離・フレンド対戦）</li>
+        <li class="fair"><span><b>ブレイブパスに入っていても、対戦で強くはなりません。</b>「全員レベル1」のルールなら、誰でも同じ条件で勝負できます。</span></li>
+      </ul>
+    </div>
+    <p class="vs-fine">遊ぶには、お互いにタイムブレイブが必要です（同じバージョンどうしで対戦できます）。</p>
   </div>
 </section>
 
@@ -221,10 +278,10 @@ footer p{margin:0 0 6px}
       </article>
       <article class="feat">
         <div class="num">3</div>
-        <h3>みんなと競える、<br>ランキングと対戦</h3>
-        <p>毎週問題が入れ替わるスコアアタックのランキングと、1対1の対戦があります。対戦は、フレンドやランダムな相手とのオンライン対戦のほか、近くの人とのBluetooth対戦にも対応しています。</p>
+        <h3>毎週入れ替わる、<br>全国ランキング</h3>
+        <p>毎週問題が入れ替わるスコアアタックです。全国のプレイヤーと、タイミングの正確さで競えます。友達との対戦は、上の「友達と対戦」をご覧ください。</p>
         <ul class="entrances">
-          <li>週替わりの全国ランキング（Game Center）</li><li>フレンド・ランダム対戦</li><li>近くの人と遊べる近距離対戦</li>
+          <li>週替わりの全国ランキング（Game Center）</li><li>ランキングでは、キャラのレベルは関係なし</li>
         </ul>
       </article>
     </div>
@@ -307,7 +364,8 @@ footer p{margin:0 0 6px}
       <details class="faq"><summary>Q. お金をかけないと遊べませんか？</summary><p>いいえ。冒険・ランキング・対戦は、基本プレイ無料で遊べます。時石の購入とブレイブパスは任意です。</p></details>
       <details class="faq"><summary>Q. ガチャの確率は分かりますか？</summary><p>アプリのガチャ画面にある「提供割合」から、確率とルールを確認できます。</p></details>
       <details class="faq"><summary>Q. ブレイブパスは解約できますか？</summary><p>いつでも解約できます。iPhone・iPadの「設定」アプリ →（ご自分の名前）→「サブスクリプション」、またはアプリ内の「ブレイブパス」画面から行ってください。期間が終わる24時間前までに解約しないと、自動で更新されます。解約しても、その期間の終わりまでは特典を使えます。</p></details>
-      <details class="faq"><summary>Q. インターネットは必要ですか？</summary><p>時石・ブレイブパスの購入、広告の視聴、ランキング、フレンド・ランダム対戦には、インターネット接続が必要です。</p></details>
+      <details class="faq"><summary>Q. 友達と遊ぶにはどうすればいいですか？</summary><p>お互いにタイムブレイブを入れてください（同じバージョンどうしで対戦できます）。近くにいる友達とは、ホームの「対戦」→「近距離対戦」から、Bluetooth・Wi-Fiで対戦できます。インターネットも、Game Centerのサインインも要りません。離れた友達とは、「フレンド」から招待できます。ランダムな相手との対戦もできます。この2つは、Game Centerへのサインインとインターネット接続が必要です。</p></details>
+      <details class="faq"><summary>Q. インターネットは必要ですか？</summary><p>時石・ブレイブパスの購入、広告の視聴、ランキング、フレンド・ランダム対戦には、インターネット接続が必要です。近くの友達との「近距離対戦」は、インターネットなしで遊べます。</p></details>
       <details class="faq"><summary>Q. 機種変更したらデータは引き継げますか？</summary><p>ゲームのデータはお使いの端末の中だけに保存され、別の端末への引き継ぎはできません。ブレイブパスの加入状態と初回限定パックの購入済みの状態は、アプリ内の「購入を復元」で戻せます（時石は戻りません）。</p></details>
       <details class="faq"><summary>Q. どの機種で遊べますか？</summary><p>iOS 17.0以降のiPhone、およびiPadOS 17.0以降のiPadで遊べます。iPadでは縦向きの全画面表示になります。Androidには対応していません。</p></details>
     </div>
