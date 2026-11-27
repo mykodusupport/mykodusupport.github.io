@@ -85,8 +85,10 @@ section{padding:64px 0}
 .vs-card p{margin:0;color:var(--ink-soft);font-size:14.5px}
 .vs-card .entrances{margin-top:14px}
 .vs-body{display:grid;gap:28px;align-items:center;max-width:900px;margin:26px auto 0}
-@media(min-width:760px){.vs-body{grid-template-columns:240px 1fr}}
-.vs-body .phone{max-width:240px;margin:0 auto}
+@media(min-width:760px){.vs-body{grid-template-columns:420px 1fr}}
+.vs-shots{display:flex;gap:12px;align-items:flex-end;justify-content:center}
+.vs-shots .main{flex:0 0 62%;max-width:260px}
+.vs-shots .sub{border-radius:20px;border-width:4px;flex:0 0 34%;max-width:140px;opacity:.95}
 .vs-rules{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-weight:700;font-size:15px}
 .vs-rules li{display:flex;gap:10px;background:#fff;border-radius:16px;padding:12px 16px;border:2px solid var(--line)}
 .vs-rules li::before{content:"✓";color:var(--sky);font-weight:800;flex:none}
@@ -238,7 +240,10 @@ footer p{margin:0 0 6px}
       </div>
     </div>
     <div class="vs-body">
-      <div class="phone"><img src="images/versus.jpg" alt="対戦ロビー：近距離対戦・フレンド・ランダムの3つから選べる画面" width="620" height="1348" loading="lazy"></div>
+      <div class="vs-shots">
+        <div class="phone main"><img src="images/versus_battle.jpg" alt="対戦中の画面：相手のパーティとHP、目標時間、自分のパーティ、STARTとSTOPのボタン" width="620" height="1348" loading="lazy"></div>
+        <div class="phone sub"><img src="images/versus.jpg" alt="対戦ロビー：近距離対戦・フレンド・ランダムの3つから選べる画面" width="620" height="1348" loading="lazy"></div>
+      </div>
       <ul class="vs-rules">
         <li>3人ずつのパーティで、先頭同士が戦います</li>
         <li>両者が同時にSTOP。目標時間に近いほど強い一撃になります</li>
@@ -300,7 +305,7 @@ footer p{margin:0 0 6px}
       <figure><div class="phone"><img src="images/battle.jpg" alt="バトル画面：敵のHPと目標時間2.78秒、STARTとSTOPのボタン" width="620" height="1348" loading="lazy"></div><figcaption>バトル<small>目標時間にSTOPを合わせる</small></figcaption></figure>
       <figure><div class="phone"><img src="images/victory.jpg" alt="勝利画面：VICTORYの表示と獲得報酬" width="620" height="1348" loading="lazy"></div><figcaption>勝利<small>倒すとコインや時石を獲得</small></figcaption></figure>
       <figure><div class="phone"><img src="images/gacha.jpg" alt="ガチャの召喚結果の画面：仲間が10人並んでいる" width="620" height="1348" loading="lazy"></div><figcaption>ガチャ<small>時石で仲間を呼ぶ</small></figcaption></figure>
-      <figure><div class="phone"><img src="images/versus.jpg" alt="対戦ロビー：パーティとルール、近距離対戦・フレンド・ランダムの選択" width="620" height="1348" loading="lazy"></div><figcaption>対戦<small>近距離・フレンド・ランダム</small></figcaption></figure>
+      <figure><div class="phone"><img src="images/versus_battle.jpg" alt="対戦中の画面：相手のパーティとHP、目標時間、STARTとSTOPのボタン" width="620" height="1348" loading="lazy"></div><figcaption>対戦<small>友達と1対1で勝負</small></figcaption></figure>
     </div>
   </div>
 </section>
