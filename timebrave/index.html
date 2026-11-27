@@ -85,10 +85,11 @@ section{padding:64px 0}
 .vs-card p{margin:0;color:var(--ink-soft);font-size:14.5px}
 .vs-card .entrances{margin-top:14px}
 .vs-body{display:grid;gap:28px;align-items:center;max-width:900px;margin:26px auto 0}
-@media(min-width:760px){.vs-body{grid-template-columns:420px 1fr}}
-.vs-shots{display:flex;gap:12px;align-items:flex-end;justify-content:center}
-.vs-shots .main{flex:0 0 62%;max-width:260px}
-.vs-shots .sub{border-radius:20px;border-width:4px;flex:0 0 34%;max-width:140px;opacity:.95}
+@media(min-width:760px){.vs-body{grid-template-columns:460px 1fr}}
+.vs-shots{display:flex;gap:6px;align-items:center;justify-content:center}
+.vs-step{margin:0;flex:0 1 200px;min-width:0;text-align:center}
+.vs-step figcaption{margin-top:8px;font-size:13px;font-weight:800;color:var(--sky-dark)}
+.vs-arrow{color:var(--sky);font-size:18px;flex:none;margin-bottom:24px}
 .vs-rules{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-weight:700;font-size:15px}
 .vs-rules li{display:flex;gap:10px;background:#fff;border-radius:16px;padding:12px 16px;border:2px solid var(--line)}
 .vs-rules li::before{content:"✓";color:var(--sky);font-weight:800;flex:none}
@@ -241,8 +242,9 @@ footer p{margin:0 0 6px}
     </div>
     <div class="vs-body">
       <div class="vs-shots">
-        <div class="phone main"><img src="images/versus_battle.jpg" alt="対戦中の画面：相手のパーティとHP、目標時間、自分のパーティ、STARTとSTOPのボタン" width="620" height="1348" loading="lazy"></div>
-        <div class="phone sub"><img src="images/versus.jpg" alt="対戦ロビー：近距離対戦・フレンド・ランダムの3つから選べる画面" width="620" height="1348" loading="lazy"></div>
+        <figure class="vs-step"><div class="phone"><img src="images/versus_start.jpg" alt="対戦開始の画面：相手のリーダーと自分のリーダーが向かい合うVS演出" width="620" height="1348" loading="lazy"></div><figcaption>対戦開始</figcaption></figure>
+        <span class="vs-arrow" aria-hidden="true">▶</span>
+        <figure class="vs-step"><div class="phone"><img src="images/versus_battle.jpg" alt="対戦中の画面：相手のパーティとHP、目標時間、自分のパーティ、STARTとSTOPのボタン" width="620" height="1348" loading="lazy"></div><figcaption>対戦中</figcaption></figure>
       </div>
       <ul class="vs-rules">
         <li>3人ずつのパーティで、先頭同士が戦います</li>
